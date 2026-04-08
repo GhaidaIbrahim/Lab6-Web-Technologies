@@ -1,5 +1,4 @@
 {% extends "layouts/base.html" %}
-
 {% block content %}
 <h2>Results:</h2>
 <ul>
@@ -11,3 +10,9 @@
 </ul>
 <a href="/books/search">Try another search</a>
 {% endblock content %}
+
+{% for obj in books %}
+    ID: {{obj.id}}, Title: {{obj.title}}
+    <hr>
+{% endfor %}
+
